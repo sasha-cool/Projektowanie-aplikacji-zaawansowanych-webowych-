@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazyn Elektro-Bud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>System Magazynowy Elektro-Bud</h1>
+        <p>Zaawansowane aplikacje webowe — Panel Zarządzania</p>
+    </header>
+
+    <main class="container">
+        <!-- Formularz dodawania/edycji -->
+        <section class="form-section">
+            <h2 id="form-title">Zarządzanie produktem</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-name">Nazwa produktu:</label>
+                    <input type="text" id="product-name" required placeholder="np. Wyłącznik różnicowoprądowy">
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-category">Kategoria:</label>
+                    <select id="product-category">
+                        <option value="Aparatura">Aparatura elektryczna</option>
+                        <option value="Kable">Kable i przewody</option>
+                        <option value="Oświetlenie">Oświetlenie</option>
+                        <option value="Narzędzia">Narzędzia</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product-qty">Ilość (szt.):</label>
+                        <input type="number" id="product-qty" min="0" required placeholder="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Cena netto (zł):</label>
+                        <input type="number" id="product-price" min="0" step="0.01" required placeholder="0.00">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="form-submit-btn" class="btn btn-primary">Dodaj produkt</button>
+                    <button type="button" id="cancel-edit-btn" class="btn btn-secondary hidden">Anuluj edycję</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Tabela z listą produktów -->
+        <section class="table-section">
+            <h2>Stan magazynowy</h2>
+            <table class="warehouse-table">
+                <thead>
+                    <tr>
+                        <th>Lp.</th>
+                        <th>Nazwa produktu</th>
+                        <th>Kategoria</th>
+                        <th>Ilość</th>
+                        <th>Cena</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Elementy generowane dynamicznie przez TypeScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="dist/main.js" defer></script>
+</body>
+                      </html>
+                      
