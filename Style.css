@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #16a085;
+    --danger-color: #c0392b;
+    --bg-color: #f5f7fa;
+    --text-color: #34495e;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px text-align;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .container { grid-template-columns: 1fr; }
+}
+
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-primary { background-color: var(--accent-color); color: white; width: 100%; }
+.btn-primary:hover { background-color: #148f77; }
+.btn-secondary { background-color: #bdc3c7; color: #333; }
+.btn-secondary:hover { background-color: #95a5a6; }
+
+.btn-edit { background-color: #f39c12; color: white; margin-right: 5px; }
+.btn-edit:hover { background-color: #d68910; }
+.btn-delete { background-color: var(--danger-color); color: white; }
+.btn-delete:hover { background-color: #a93226; }
+
+.hidden { display: none; }
+
+.warehouse-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.warehouse-table th, .warehouse-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.warehouse-table th {
+    background-color: #ecf0f1;
+    color: var(--primary-color);
+}
+
+.text-center { text-align: center; }
+  
