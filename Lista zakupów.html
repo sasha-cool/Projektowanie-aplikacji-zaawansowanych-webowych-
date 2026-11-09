@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista zakupów</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Lista zakupów</h1>
+
+      <div class="form">
+        <input id="nameInput" type="text" placeholder="Nazwa produktu" />
+        <input id="qtyInput" type="number" min="1" value="1" />
+        <button id="addButton">Dodaj</button>
+      </div>
+
+      <div class="filters">
+        <label><input type="radio" name="filter" value="all" checked /> Wszystkie</label>
+        <label><input type="radio" name="filter" value="active" /> Do kupienia</label>
+        <label><input type="radio" name="filter" value="bought" /> Kupione</label>
+      </div>
+
+      <div class="summary">
+        <strong>Do kupienia:</strong>
+        <span id="countText">0</span>
+      </div>
+
+      <ul id="list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
